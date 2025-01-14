@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/14f6bf97-c620-4d2f-9199-8cb471bd2ef3/resourceGroups/Social-App/providers/Microsoft.Web/sites/social-app",
+    "appService.deploySubpath": "."
+}
