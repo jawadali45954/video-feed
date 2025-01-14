@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 0 85% 57%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 47 100% 90%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 0 85% 57%;
+    --radius: 0.5rem;
+  }
+}
+
+.video-scroll-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.video-item {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.video-overlay {
+  @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.video-overlay {
+  @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.video-overlay button {
+  @apply bg-white text-black rounded-full px-3 py-1 shadow-md;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.video-overlay button:hover {
+  background-color: #e0e0e0;
+}
+
+.video-overlay input[type="text"] {
+  @apply w-full p-2 mt-2 text-black rounded-md border border-gray-300;
+}
+
+.video-overlay ul {
+  @apply mt-2;
+  list-style: none;
+  padding-left: 0;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.video-overlay ul li {
+  @apply bg-white text-black px-2 py-1 rounded-md mb-1;
+  word-break: break-word;
+}
+
+.video-overlay .flex {
+  @apply mt-2;
+  gap: 0.5rem;
+}
